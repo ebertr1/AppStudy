@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSDE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block customCSS %}
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+    
+    <div class="background">
+        <div class="overlay">
+            <header>
+                <h1>Sistema de Seguimiento de Desempeño Estudiantil - SSDE</h1>
+            </header>
+            <main>
+                <a href="{{ url_for('login') }}"><button>Acceder al Sistema</button></a>
+                <!-- <a href="#" class="recover-password">Recuperar contraseña</a> -->
+            </main>
+        </div>
+    </div>
+</body>
+</html>
