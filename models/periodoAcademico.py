@@ -1,24 +1,43 @@
-from controls.dao.daoAdapter import DaoAdapter
-from models.periodoAcademico import PeriodoAcademico
-
-class PeriodoAcademicoControl(DaoAdapter):
+class PeriodoAcademico:
     def __init__(self):
-        super().__init__(PeriodoAcademico)
-        self.__periodoAcademico = PeriodoAcademico()
-    
+        self.__id = 0
+        self.__fechaInicio = ''
+        self.__fechaFinal = ''
+
     @property
-    def periodoAcademico(self):
-        return self.__periodoAcademico
-    
-    @periodoAcademico.setter
-    def periodoAcademico(self, value):
-        self.__periodoAcademico = value
-        
+    def _id(self):
+        return self.__id
+
+    @_id.setter
+    def _id(self, value):
+        self.__id = value
+
     @property
-    def periodosAcademicos(self):
-        return self._list()
-    
+    def _fechaInicio(self):
+        return self.__fechaInicio
+
+    @_fechaInicio.setter
+    def _fechaInicio(self, value):
+        self.__fechaInicio = value
+
     @property
-    def save(self):
-        self.__periodoAcademico._id = self._lista._length + 1
-        self._lista.append(self.__periodoAcademico)
+    def _fechaFinal(self):
+        return self.__fechaFinal
+
+    @_fechaFinal.setter
+    def _fechaFin(self, value):
+        self.__fechaFinal = value
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.__id,
+            'fechaInicio': self.__fechaInicio,
+            'fechaFinal': self.__fechaFinal
+        }
+    
+    def deserialize(self, data):
+        self.__id = data['id']
+        self.__fechaInicio = data['fechaInicio']
+        self.__fechaFinal = data['fechaFinal']
+        return self
