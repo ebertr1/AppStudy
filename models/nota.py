@@ -57,7 +57,7 @@ class Nota:
             'parametrosCalificacion': self.__parametrosCalificacion
         }
         
-    def deserialize(self, data):
+    def deserializar(self, data):
         self.__id = data['id']
         self.__valor = data['valor']
         self.__unidad = data['unidad']
