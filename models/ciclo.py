@@ -37,7 +37,7 @@ class Ciclo:
             'paralelo': self.__paralelo
         }   
         
-    def deserialize(self, data):
+    def deserializar(self, data):
         self.__id = data['id']
         self.__numeroCiclo = data['numeroCiclo']
         self.__paralelo = data['paralelo']

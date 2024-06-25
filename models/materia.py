@@ -58,7 +58,7 @@ class Materia:
             'cedula_docente': self.__cedulaDocente
         }
     
-    def deserialize(self, data):
+    def deserializar(self, data):
         self.__id = data['id']
         self.__nombre = data['nombre']
         self.__ciclo = data['ciclo']
