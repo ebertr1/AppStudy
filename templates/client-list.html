@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Home</title>
+	<title>Lista de clientes</title>
 
 	<!-- Normalize V8.0.1 -->
+	
 	<link rel="stylesheet" href="/static/css/normalize.css">
 
 	<!-- Bootstrap V4.3 -->
@@ -41,6 +42,7 @@
 			<div class="full-box nav-lateral-content">
 				<figure class="full-box nav-lateral-avatar">
 					<i class="far fa-times-circle show-nav-lateral"></i>
+					
 					<img src="/static/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
 						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
@@ -64,6 +66,9 @@
 								</li>
 								<li>
 									<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
+								</li>
+								<li>
+									<a href="/templates/client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
 								</li>
 							</ul>
 						</li>
@@ -141,81 +146,164 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fab fa-dashcube fa-fw"></i> &nbsp; DASHBOARD
+					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES
 				</h3>
 				<p class="text-justify">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
 				</p>
 			</div>
-			
-			<!-- Content -->
-			<div class="full-box tile-container">
 
-				<a href="client-new.html" class="tile">
-					<div class="tile-tittle">Clientes</div>
-					<div class="tile-icon">
-						<i class="fas fa-users fa-fw"></i>
-						<p>5 Registrados</p>
-					</div>
-				</a>
-
-				<a href="item-list.html" class="tile">
-					<div class="tile-tittle">Items</div>
-					<div class="tile-icon">
-						<i class="fas fa-pallet fa-fw"></i>
-						<p>9 Registrados</p>
-					</div>
-				</a>
-
-				<a href="reservation-list.html" class="tile">
-					<div class="tile-tittle">Prestamos</div>
-					<div class="tile-icon">
-						<i class="fas fa-file-invoice-dollar fa-fw"></i>
-						<p>10 Registrados</p>
-					</div>
-				</a>
-
-				<a href="user-list.html" class="tile">
-					<div class="tile-tittle">Usuarios</div>
-					<div class="tile-icon">
-						<i class="fas fa-user-secret fa-fw"></i>
-						<p>50 Registrados</p>
-					</div>
-				</a>
-
-				<a href="company.html" class="tile">
-					<div class="tile-tittle">Empresa</div>
-					<div class="tile-icon">
-						<i class="fas fa-store-alt fa-fw"></i>
-						<p>1 Registrada</p>
-					</div>
-				</a>
-				
+			<div class="container-fluid">
+				<ul class="full-box list-unstyled page-nav-tabs">
+					<li>
+						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+					</li>
+					<li>
+						<a class="active" href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+					</li>
+					<li>
+						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+					</li>
+				</ul>	
 			</div>
 			
+			<!-- Content here-->
+			<div class="container-fluid">
+				<div class="table-responsive">
+					<table class="table table-dark table-sm">
+						<thead>
+							<tr class="text-center roboto-medium">
+								<th>#</th>
+								<th>DNI</th>
+								<th>NOMBRE</th>
+								<th>APELLIDO</th>
+								<th>TELEFONO</th>
+								<th>ACTUALIZAR</th>
+								<th>ELIMINAR</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center" >
+								<td>1</td>
+								<td>012342567</td>
+								<td>NOMBRE DEL CLIENTE</td>
+								<td>APELLIDO DEL CLIENTE</td>
+								<td>72349874</td>
+								<td>
+									<a href="client-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>2</td>
+								<td>012342567</td>
+								<td>NOMBRE DEL CLIENTE</td>
+								<td>APELLIDO DEL CLIENTE</td>
+								<td>72349874</td>
+								<td>
+									<a href="client-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>3</td>
+								<td>012342567</td>
+								<td>NOMBRE DEL CLIENTE</td>
+								<td>APELLIDO DEL CLIENTE</td>
+								<td>72349874</td>
+								<td>
+									<a href="client-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+							<tr class="text-center" >
+								<td>4</td>
+								<td>012342567</td>
+								<td>NOMBRE DEL CLIENTE</td>
+								<td>APELLIDO DEL CLIENTE</td>
+								<td>72349874</td>
+								<td>
+									<a href="client-update.html" class="btn btn-success">
+	  									<i class="fas fa-sync-alt"></i>	
+									</a>
+								</td>
+								<td>
+									<form action="">
+										<button type="button" class="btn btn-warning">
+		  									<i class="far fa-trash-alt"></i>
+										</button>
+									</form>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled">
+							<a class="page-link" href="#" tabindex="-1">Previous</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+							<a class="page-link" href="#">Next</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 
 		</section>
 	</main>
 	
 	
-	<!--=============================================
-	=            Include JavaScript files           =
-	==============================================-->
-	<!-- jQuery V3.4.1 -->
-	<script src="/static/js/jquery-3.4.1.min.js" ></script>
+<!--=============================================
+=            Include JavaScript files           =
+==============================================-->
+<!-- jQuery V3.4.1 -->
+<script src="/static/js/jquery-3.4.1.min.js"></script>
 
-	<!-- popper -->
-	<script src="/static/js/popper.min.js" ></script>
+<!-- Popper -->
+<script src="/static/js/popper.min.js"></script>
 
-	<!-- Bootstrap V4.3 -->
-	<script src="/static/js/bootstrap.min.js" ></script>
+<!-- Bootstrap V4.3 -->
+<script src="/static/js/bootstrap.min.js"></script>
 
-	<!-- jQuery Custom Content Scroller V3.1.5 -->
-	<script src="/static/js/jquery.mCustomScrollbar.concat.min.js" ></script>
+<!-- jQuery Custom Content Scroller V3.1.5 -->
+<script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
-	<!-- Bootstrap Material Design V4.0 -->
-	<script src="/static/js/bootstrap-material-design.min.js" ></script>
-	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<!-- Bootstrap Material Design V4.0 -->
+<script src="/static/js/bootstrap-material-design.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('body').bootstrapMaterialDesign();
+  });
+</script>
+
 
 	<script src="/static/js/main.js" ></script>
 </body>

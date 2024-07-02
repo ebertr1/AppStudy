@@ -22,6 +22,47 @@ def login():
         return render_template('login.html')
     else:
         return render_template('login.html')
+    
+@app.route('/clientlist')
+def clientlist():
+    return render_template('client-list.html')
+
+@app.route('/clientsearch')
+def clientsearch():
+    return render_template('client-search.html')
+
+@app.route('/clientupdate')
+def clientupdate():
+    return render_template('client-update.html')
+
+@app.route('/company')
+def company():
+    return render_template('company.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/itemlist')
+def itemlist():
+    return render_template('item-list.html')
+
+@app.route('/itemnew')
+def itemnew():
+    return render_template('item-new.html')
+
+@app.route('/itemsearch')
+def itemsearch():
+    return render_template('item-search.html')
+
+@app.route('/itemupdate')
+def itemupdate():
+    return render_template('item-update.html')
+
+@app.route('/payment')
+def payment():
+    return render_template('payment.html')
+
 
 # Punto de entrada para ejecutar la aplicación
 if __name__ == '__main__':
