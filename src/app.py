@@ -63,6 +63,43 @@ def itemupdate():
 def payment():
     return render_template('payment.html')
 
+@app.route('/reservationlist')
+def reservat():
+    return render_template('reservation-list.html')
+
+@app.route('/reservationnew')
+def reservationnew():
+    return render_template('reservation-new.html')
+
+@app.route('/reservationpending')
+def reservationpending():
+    return render_template('reservation-pending.html')
+
+@app.route('/reservationsearch')
+def reservationsearch():
+    return render_template('reservation-search.html')
+
+@app.route('/reservationupdate')
+def reservationupdate():
+    return render_template('reservation-update.html')
+
+@app.route('/userlist')
+def userlist():
+    return render_template('user-list.html')
+
+@app.route('/usernew')
+def usernew():
+    return render_template('user-new.html')
+
+@app.route('/usersearch')
+def usersearch():
+    return render_template('user-search.html')
+
+@app.route('/userupdate')
+def userupdate():
+    return render_template('user-update.html')
+
+
 
 # Punto de entrada para ejecutar la aplicación
 if __name__ == '__main__':
