@@ -23,80 +23,85 @@ def login():
     else:
         return render_template('login.html')
     
-@app.route('/clientlist')
-def clientlist():
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/client-list')
+def client_list():
     return render_template('client-list.html')
 
-@app.route('/clientsearch')
-def clientsearch():
+@app.route('/client-new')
+def client_new():
+    return render_template('client-new.html')
+
+
+@app.route('/client-search')
+def client_search():
     return render_template('client-search.html')
 
-@app.route('/clientupdate')
-def clientupdate():
+@app.route('/client-update')
+def client_update():
     return render_template('client-update.html')
 
 @app.route('/company')
 def company():
     return render_template('company.html')
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
-
-@app.route('/itemlist')
-def itemlist():
-    return render_template('item-list.html')
-
-@app.route('/itemnew')
-def itemnew():
+@app.route('/item-new')
+def item_new():
     return render_template('item-new.html')
 
-@app.route('/itemsearch')
-def itemsearch():
+@app.route('/item-list')
+def item_list():
+    return render_template('item-list.html')
+
+@app.route('/item-search')
+def item_search():
     return render_template('item-search.html')
 
-@app.route('/itemupdate')
-def itemupdate():
+@app.route('/item-update')
+def item_update():
     return render_template('item-update.html')
 
 @app.route('/payment')
 def payment():
     return render_template('payment.html')
 
-@app.route('/reservationlist')
-def reservat():
-    return render_template('reservation-list.html')
-
-@app.route('/reservationnew')
-def reservationnew():
+@app.route('/reservation-new')
+def reservation_new():
     return render_template('reservation-new.html')
 
-@app.route('/reservationpending')
-def reservationpending():
-    return render_template('reservation-pending.html')
+@app.route('/reservation-list')
+def reservation_list():
+    return render_template('reservation-list.html')
 
-@app.route('/reservationsearch')
-def reservationsearch():
+@app.route('/reservation-search')
+def reservation_search():
     return render_template('reservation-search.html')
 
-@app.route('/reservationupdate')
-def reservationupdate():
+@app.route('/reservation-pending')
+def reservation_pending():
+    return render_template('reservation-pending.html')
+
+@app.route('/reservation-update')
+def reservation_update():
     return render_template('reservation-update.html')
 
-@app.route('/userlist')
-def userlist():
-    return render_template('user-list.html')
-
-@app.route('/usernew')
-def usernew():
+@app.route('/user-new')
+def user_new():
     return render_template('user-new.html')
 
-@app.route('/usersearch')
-def usersearch():
+@app.route('/user-list')
+def user_list():
+    return render_template('user-list.html')
+
+@app.route('/user-search')
+def user_search():
     return render_template('user-search.html')
 
-@app.route('/userupdate')
-def userupdate():
+@app.route('/user-update')
+def user_update():
     return render_template('user-update.html')
 
 
