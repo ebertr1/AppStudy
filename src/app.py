@@ -31,11 +31,6 @@ def home():
 def client_list():
     return render_template('client-list.html')
 
-<<<<<<< HEAD
-
-@app.route('/clientsearch')
-def clientsearch():
-=======
 @app.route('/client-new')
 def client_new():
     return render_template('client-new.html')
@@ -43,7 +38,6 @@ def client_new():
 
 @app.route('/client-search')
 def client_search():
->>>>>>> main
     return render_template('client-search.html')
 
 @app.route('/client-update')
