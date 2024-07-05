@@ -27,6 +27,7 @@ def login():
 def clientlist():
     return render_template('client-list.html')
 
+
 @app.route('/clientsearch')
 def clientsearch():
     return render_template('client-search.html')
