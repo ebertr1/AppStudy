@@ -58,13 +58,13 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Clientes <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Cliente</a>
+									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Cliente</a>
 								</li>
 								<li>
-									<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de clientes</a>
+									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de clientes</a>
 								</li>
 								<li>
-									<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
+									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
 								</li>
 							</ul>
 						</li>
@@ -73,13 +73,13 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
 								</li>
 								<li>
-									<a href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
 								</li>
 								<li>
-									<a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
 								</li>
 							</ul>
 						</li>
@@ -88,16 +88,16 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
 								</li>
 								<li>
-									<a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
 								</li>
 								<li>
-									<a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
 								</li>
 								<li>
-									<a href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
+									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
 								</li>
 							</ul>
 						</li>
@@ -106,19 +106,19 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="user-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
+									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
 								</li>
 								<li>
-									<a href="user-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
+									<a href="{{ url_for ('user_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de usuarios</a>
 								</li>
 								<li>
-									<a href="user-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
+									<a href="{{ url_for ('user_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar usuario</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="company.html"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
+							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
 						</li>
 					</ul>
 				</nav>
@@ -148,16 +148,16 @@
             <div class="container-fluid">
                 <ul class="full-box list-unstyled page-nav-tabs">
                     <li>
-                        <a href="reservation-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
+                        <a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO PRÉSTAMO</a>
                     </li>
                     <li>
-                        <a href="reservation-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE PRÉSTAMOS</a>
+                        <a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE PRÉSTAMOS</a>
                     </li>
                     <li>
-                        <a href="reservation-search.html"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR PRÉSTAMOS</a>
+                        <a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; BUSCAR PRÉSTAMOS</a>
                     </li>
                     <li>
-                        <a class="active" href="reservation-pending.html"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS PENDIENTES</a>
+                        <a class="active" href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; PRÉSTAMOS PENDIENTES</a>
                     </li>
                 </ul>
             </div>
@@ -222,12 +222,12 @@
 									</a>
 								</td>
 								<td>
-									<a href="reservation-update.html" class="btn btn-success">
+									<a href="{{ url_for ('reservation_update')}}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
 								<td>
-									<a href="payment.html" class="btn btn-info">
+									<a href="{{ url_for ('payment')}}"class="btn btn-info">
 	  									<i class="fas fa-dollar-sign"></i>	
 									</a>
 								</td>
@@ -251,12 +251,12 @@
 									</a>
 								</td>
 								<td>
-									<a href="reservation-update.html" class="btn btn-success">
+									<a href="{{ url_for ('reservation_update')}}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
 								<td>
-									<a href="payment.html" class="btn btn-info">
+									<a href="{{ url_for ('payment')}}" class="btn btn-info">
 	  									<i class="fas fa-dollar-sign"></i>	
 									</a>
 								</td>
@@ -280,12 +280,12 @@
 									</a>
 								</td>
 								<td>
-									<a href="reservation-update.html" class="btn btn-success">
+									<a href="{{ url_for ('reservation_update')}}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
 								<td>
-									<a href="payment.html" class="btn btn-info">
+									<a href="{{ url_for ('payment')}}"class="btn btn-info">
 	  									<i class="fas fa-dollar-sign"></i>	
 									</a>
 								</td>
