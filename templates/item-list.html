@@ -148,13 +148,13 @@
             <div class="container-fluid">
                 <ul class="full-box list-unstyled page-nav-tabs">
                     <li>
-                        <a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ITEM</a>
+                        <a href="{{ url_for ('item_new') }}"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ITEM</a>
                     </li>
                     <li>
-                        <a class="active" href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ITEMS</a>
+                        <a class="active" href="{{ url_for ('item_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ITEMS</a>
                     </li>
                     <li>
-                        <a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ITEM</a>
+                        <a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ITEM</a>
                     </li>
                 </ul>
             </div>
@@ -216,7 +216,7 @@
 								<td>NOMBRE DEL ITEM</td>
 								<td>81</td>
 								<td>
-                                    <a href="item-update.html" class="btn btn-success">
+                                    <a href="{{ url_for ('item_update') }}" class="btn btn-success">
                                         <i class="fas fa-sync-alt"></i> 
                                     </a>
                                 </td>
