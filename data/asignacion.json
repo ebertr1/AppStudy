@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "cedulaDocente": "1234567890",
+        "paralelo": "A",
+        "tipoIdentificacion": "CEDULA"
+    },
+    {
+        "id": 2,
+        "cedulaDocente": "1234567890",
+        "paralelo": "A",
+        "tipoIdentificacion": "CEDULA"
+    }
+]

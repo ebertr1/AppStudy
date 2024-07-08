@@ -1,2 +1,0 @@
-class LinkedListException(Exception):
-    pass

@@ -4,6 +4,8 @@ class Rol:
         self.__nombre = ''
         self.__descripcion = ''
 
+
+
     @property
     def _id(self):
         return self.__id
@@ -28,16 +30,17 @@ class Rol:
     def _descripcion(self, value):
         self.__descripcion = value
 
-@property
-def serialize(self):
-    return {
-        'id': self.__id,
-        'nombre': self.__nombre,
-        'descripcion': self.__descripcion
-    }
-
-def deserializar(self, data):
-    self.__id = data['id']
-    self.__nombre = data['nombre']
-    self.__descripcion = data['descripcion']
-    return self
+    @property
+    def serializable(self):
+        return {
+            "id": self._id,
+            "nombre": self._nombre,
+            "descripcion": self._descripcion
+        }
+    
+    def deserializar(self, data):
+        rol = Rol()
+        rol._id = data['id']
+        rol._nombre = data['nombre']
+        rol._descripcion = data['descripcion']
+        return rol
