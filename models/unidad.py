@@ -1,44 +1,47 @@
 class Unidad:
-     def __init__(self):
+    def __init__(self):
         self.__id = 0
         self.__numeroUnidad = 0
         self.__duracionSemanas = 0
 
-        @property
-        def _id(self):
-            return self.__id
+    @property
+    def _id(self):
+        return self.__id
 
-        @_id.setter
-        def _id(self, value):
-            self.__id = value
+    @_id.setter
+    def _id(self, value):
+        self.__id = value
 
-        @property
-        def _numeroUnidad(self):
-            return self.__numeroUnidad
+    @property
+    def _numeroUnidad(self):
+        return self.__numeroUnidad
 
-        @_numeroUnidad.setter
-        def _numeroUnidad(self, value):
-            self.__numeroUnidad = value
+    @_numeroUnidad.setter
+    def _numeroUnidad(self, value):
+        self.__numeroUnidad = value
 
-        @property
-        def _duracionSemanas(self):
-            return self.__duracionSemanas
+    @property
+    def _duracionSemanas(self):
+        return self.__duracionSemanas
 
-        @_duracionSemanas.setter
-        def _duracionSemanas(self, value):
-            self.__duracionSemanas = value
+    @_duracionSemanas.setter
+    def _duracionSemanas(self, value):
+        self.__duracionSemanas = value
+    
+    @property
+    def serializable(self):
+        return {
+            "id": self._id,
+            "numeroUnidad": self._numeroUnidad,
+            "duracionSemanas": self._duracionSemanas
+        }
+    def deserializar(self, data):
+        unidad = Unidad()
+        unidad._id = data['id']
+        unidad._numeroUnidad = data['numeroUnidad']
+        unidad._duracionSemanas = data['duracionSemanas']
+        return unidad
+    
 
-        
-@property
-def serialize(self):
-    return {
-        'id': self.__id,
-        'numeroUnidad': self.__numeroUnidad,
-        'duracionSemanas': self.__duracionSemanas
-    }
 
-def deserializar(self, data):
-    self.__id = data['id']
-    self.__numeroUnidad = data['numeroUnidad']
-    self.__duracionSemanas = data['duracionSemanas']
-    return self
+    

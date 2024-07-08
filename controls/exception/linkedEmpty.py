@@ -1,2 +1,0 @@
-class LinkedEmptyException(Exception):
-    pass

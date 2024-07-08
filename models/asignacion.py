@@ -1,10 +1,11 @@
+
+from models.enumTipoIdentificacion import EnumTipoIdentificacion
 class Asignacion:
     def __init__(self):
         self.__id = 0
         self.__cedulaDocente = ''
         self.__paralelo = ''
-        self.__numeroIdentificacion = ''
-
+        self.__tipoIdentificacion = EnumTipoIdentificacion
 
     @property
     def _id(self):
@@ -13,7 +14,6 @@ class Asignacion:
     @_id.setter
     def _id(self, value):
         self.__id = value
-
     @property
     def _cedulaDocente(self):
         return self.__cedulaDocente
@@ -31,24 +31,27 @@ class Asignacion:
         self.__paralelo = value
 
     @property
-    def _numeroIdentificacion(self):
-        return self.__numeroIdentificacion
+    def _tipoIdentificacion(self):
+        return self.__tipoIdentificacion
 
-    @_numeroIdentificacion.setter
-    def _numeroIdentificacion(self, value):
-        self.__numeroIdentificacion = value
-@property
-def serialize(self):
-    return {
-        'id': self.__id,
-        'cedulaDocente': self.__cedulaDocente,
-        'paralelo': self.__paralelo,
-        'numeroIdentificacion': self.__numeroIdentificacion
-    }
+    @_tipoIdentificacion.setter
+    def _tipoIdentificacion(self, value):
+        self.__tipoIdentificacion = value
 
-def deserializar(self, data):
-    self.__id = data['id']
-    self.__cedulaDocente = data['cedulaDocente']
-    self.__paralelo = data['paralelo']
-    self.__numeroIdentificacion = data['numeroIdentificacion']
-    return self
+    @property
+    def serializable(self):
+        return {
+            "id": self._id,
+            "cedulaDocente": self._cedulaDocente,
+            "paralelo": self._paralelo,
+            "tipoIdentificacion": self._tipoIdentificacion.__str__()
+        }
+    
+    def deserializar(self, data):
+        asignacion = Asignacion()
+        asignacion._id = data['id']
+        asignacion._cedulaDocente = data['cedulaDocente']
+        asignacion._paralelo = data['paralelo']
+        asignacion._tipoIdentificacion = data['tipoIdentificacion']
+        return asignacion
+    

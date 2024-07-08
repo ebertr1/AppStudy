@@ -1,4 +1,4 @@
-class Node(object):
+class Node (object):
     def __init__(self, data, next = None):
         self.__data = data
         self.__next = next
@@ -18,9 +18,3 @@ class Node(object):
     @_next.setter
     def _next(self, value):
         self.__next = value
-
-
-
-
-
-    
