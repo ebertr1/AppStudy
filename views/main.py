@@ -6,17 +6,22 @@ from controls.asignacionDaoControl import AsignacionDaoControl
 from  controls.cuentaDaoControl import CuentaDaoControl
 from controls.rolDaoControl import RolDaoControl
 from controls.unidadDaoControl import UnidadDaoControl
+from controls.cicloDaoControl import CicloDaoControl
 
 asig = AsignacionDaoControl()
 cu = CuentaDaoControl()
 r = RolDaoControl()
 u = UnidadDaoControl()
-
+ci = CicloDaoControl()
 try:
-    u._unidad._numeroUnidad = '2'
+    ci._ciclo._numeroCiclo = '1'
+    ci._ciclo._paralelo = 'A'
+    ci.save
+    ci._ciclo = None
+    """u._unidad._numeroUnidad = '2'
     u._unidad._duracionSemanas = '3 semanas'
     u.save
-    u._unidad = None
+    u._unidad = None"""
     """r._rol._nombre = 'Estudiante'
     r._rol._descripcion = 'Rol para estudiantes'
     r.save
