@@ -53,5 +53,4 @@ class Asignacion:
         asignacion._cedulaDocente = data['cedulaDocente']
         asignacion._paralelo = data['paralelo']
         asignacion._tipoIdentificacion = data['tipoIdentificacion']
-        return asignacion
-    
+        return asignacion 
