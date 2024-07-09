@@ -59,9 +59,10 @@ class Materia:
         }
     
     def deserializar(self, data):
-        self.__id = data['id']
-        self.__nombre = data['nombre']
-        self.__ciclo = data['ciclo']
-        self.__descripcion = data['descripcion']
-        self.__cedulaDocente = data['cedula_docente']
-        return self
+        Materia = Materia()
+        Materia.__id = data['id']
+        Materia.__nombre = data['nombre']
+        Materia._ciclo = data['ciclo']
+        Materia._descripcion = data['descripcion']
+        Materia._cedulaDocente = data['cedula_docente']
+        return Materia
