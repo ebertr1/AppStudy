@@ -1,20 +1,19 @@
-from models.materia import Materia
-from controls.dao.daoAdapter import DaoAdapter
 from controls.tda.linked.linkedList import LinkedList
+from models.materia import Materia
 
-class materiaDaoControl(DaoAdapter):
+class MateriaControl():
     def __init__(self):
-        self.__materia = Materia()
-        self.__lista = LinkedList()
-
+        self._materia = Materia()
+        self._lista = LinkedList()
+    
     @property
-    def _materia(self):
-        return self.__materia
-
-    @_materia.setter
-    def _materia(self, value):
-        self.__materia = value
-
+    def materia(self):
+        return self._materia
+    
+    @materia.setter
+    def materia(self, value):
+        self._materia = value
+        
     @property
     def _lista(self):
         return self.__lista

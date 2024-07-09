@@ -5,6 +5,7 @@ class Ciclo:
         self.__numeroCiclo = ''
         self.__paralelo = 0
 
+
     @property
     def _id(self):
         return self.__id
@@ -30,16 +31,18 @@ class Ciclo:
         self.__paralelo = value
 
     @property
-    def serialize(self):
+    def serializable(self):
         return {
-            'id': self.__id,
-            'numeroCiclo': self.__numeroCiclo,
-            'paralelo': self.__paralelo
-        }   
-        
+            "id": self._id,
+            "numeroCiclo": self._numeroCiclo,
+            "paralelo": self._paralelo
+        }
     def deserializar(self, data):
-        self.__id = data['id']
-        self.__numeroCiclo = data['numeroCiclo']
-        self.__paralelo = data['paralelo']
-        return self
+        ciclo = Ciclo()
+        ciclo._id = data['id']
+        ciclo._numeroCiclo = data['numeroCiclo']
+        ciclo._paralelo = data['paralelo']
+        return ciclo
     
+
+   

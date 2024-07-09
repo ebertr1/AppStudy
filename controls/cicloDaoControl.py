@@ -1,25 +1,28 @@
+from typing import Type
 from controls.dao.daoAdapter import DaoAdapter
 from models.ciclo import Ciclo
 
-class CicloControl(DaoAdapter):
+class CicloDaoControl(DaoAdapter):
     def __init__(self):
-        def __init__(self):
-            super().__init__(Ciclo)
-            self._ciclo = Ciclo()
+        super().__init__(Ciclo)
+        self.__ciclo = None
+
+    @property
+    def _ciclo(self):
+        if self.__ciclo is None:
+            self.__ciclo = Ciclo()
+        return self.__ciclo
+
+    @_ciclo.setter
+    def _ciclo(self, value):
+        self.__ciclo = value
+
+
+    @property
+    def _lista(self):
+        return self._list()
     
     @property
-    def ciclo(self):
-        return self._ciclo
-    
-    @ciclo.setter
-    def ciclo(self, value):
-        self._ciclo = value
-        
-    @property
-    def ciclos(self):
-        return self._ciclos()
-    
-    @property
-    def _save(self):
+    def save(self):
         self.__ciclo._id = self._lista._length + 1
-        self._lista.append(self.__ciclo)
+        self._save(self.__ciclo)

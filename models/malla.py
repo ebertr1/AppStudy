@@ -1,10 +1,9 @@
-class Rol:
+class Malla:
     def __init__(self):
         self.__id = 0
         self.__nombre = ''
         self.__descripcion = ''
-
-
+        self.__fechaCreacion = ''
 
     @property
     def _id(self):
@@ -31,16 +30,28 @@ class Rol:
         self.__descripcion = value
 
     @property
+    def _fechaCreacion(self):
+        return self.__fechaCreacion
+
+    @_fechaCreacion.setter
+    def _fechaCreacion(self, value):
+        self.__fechaCreacion = value
+
+    @property
     def serializable(self):
         return {
             "id": self._id,
             "nombre": self._nombre,
-            "descripcion": self._descripcion
+            "descripcion": self._descripcion,
+            "fechaCreacion": self._fechaCreacion
         }
-    
     def deserializar(self, data):
-        rol = Rol()
-        rol._id = data['id']
-        rol._nombre = data['nombre']
-        rol._descripcion = data['descripcion']
-        return rol
+        malla = Malla()
+        malla._id = data['id']
+        malla._nombre = data['nombre']
+        malla._descripcion = data['descripcion']
+        malla._fechaCreacion = data['fechaCreacion']
+        return malla
+    
+
+       

@@ -1,9 +1,16 @@
 class Cuenta:
     def __init__(self):
+        self.__id = 0
         self.__correoInstitucional = ''
         self.__contrasenia = ''
-        self.__id = 0
 
+    @property
+    def _id(self):
+        return self.__id
+
+    @_id.setter
+    def _id(self, value):
+        self.__id = value
 
     @property
     def _correoInstitucional(self):
@@ -20,25 +27,19 @@ class Cuenta:
     @_contrasenia.setter
     def _contrasenia(self, value):
         self.__contrasenia = value
-
+    
     @property
-    def _id(self):
-        return self.__id
+    def serializable(self):
+        return {
+            "id": self._id,
+            "correoInstitucional": self._correoInstitucional,
+            "contrasenia": self._contrasenia
+        }
+    def deserializar(self, data):
+        cuenta = Cuenta()
+        cuenta._id = data['id']
+        cuenta._correoInstitucional = data['correoInstitucional']
+        cuenta._contrasenia = data['contrasenia']
+        return cuenta
 
-    @_id.setter
-    def _id(self, value):
-        self.__id = value
-
-@property
-def serialize(self):
-    return {
-        'correoInstitucional': self.__correoInstitucional,
-        'contrasenia': self.__contrasenia,
-        'id': self.__id
-    }
-
-def deserializar(self, data):
-    self.__correoInstitucional = data['correoInstitucional']
-    self.__contrasenia = data['contrasenia']
-    self.__id = data['id']
-    return self
+    
