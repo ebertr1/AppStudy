@@ -37,7 +37,8 @@ class PeriodoAcademico:
         }
     
     def deserializar(self, data):
-        self.__id = data['id']
-        self.__fechaInicio = data['fechaInicio']
-        self.__fechaFinal = data['fechaFinal']
-        return self
+        PeriodoAcademico = PeriodoAcademico()
+        PeriodoAcademico._id = data['id']
+        PeriodoAcademico._fechaInicio = data['fechaInicio']
+        PeriodoAcademico._fechaFinal = data['fechaFinal']
+        return PeriodoAcademico
