@@ -38,7 +38,7 @@ class Asignacion:
     def _numeroIdentificacion(self, value):
         self.__numeroIdentificacion = value
 @property
-def serialize(self):
+def serializable(self):
     return {
         'id': self.__id,
         'cedulaDocente': self.__cedulaDocente,

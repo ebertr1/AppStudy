@@ -13,7 +13,7 @@ class Estudiante (Persona):
         self.__numero_matricula = value
 
     @property
-    def serialize(self):
+    def serializable(self):
         data = super().serialize
         data['numero_matricula'] = self.__numero_matricula
         return data

@@ -38,7 +38,7 @@ class Persona:
         self.__dirección = value
         
     @property
-    def serialize(self):
+    def serializable(self):
         return {
             'id': self.__id,
             'nombre': self.__nombre,
