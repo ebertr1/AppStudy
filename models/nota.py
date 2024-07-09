@@ -58,9 +58,10 @@ class Nota:
         }
         
     def deserializar(self, data):
-        self.__id = data['id']
-        self.__valor = data['valor']
-        self.__unidad = data['unidad']
-        self.__cursa = data['cursa']
-        self.__parametrosCalificacion = data['parametrosCalificacion']
-        return self
+        Nota = Nota()
+        Nota._id = data['id']
+        Nota._valor = data['valor']
+        Nota._unidad = data['unidad']
+        Nota._cursa = data['cursa']
+        Nota._parametrosCalificacion = data['parametrosCalificacion']
+        return Nota
