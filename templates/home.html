@@ -29,7 +29,6 @@
 	<!-- General Styles -->
 	<link rel="stylesheet" href="/static/css/style.css">
 
-
 </head>
 <body>
 	
@@ -43,7 +42,7 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="/static/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
+						Carlos Alfaro <br><small class="roboto-condensed-light">Usuario</small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>
@@ -140,19 +139,20 @@
 
 			<!-- Page header -->
 			<div class="full-box page-header">
-				<h3 class="text-left">
-					<i class="fab fa-dashcube fa-fw"></i> &nbsp; UNIVERSIDAD NACIONAL DE LOJA
-				</h3>
-				<p class="text-justify">
-					Este sistema le proporciona las herramientas necesarias para la gestión del rendimiendo de sus estudiantes
+				<h3 class="text-center d-flex align-items-center justify-content-center">
+					<img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo" style="height: 100px;"> &nbsp; <strong style="font-size: 2em;">UNIVERSIDAD NACIONAL DE LOJA</strong>
+				</h3>												
+				<p class="text-justify" style="font-size: 1.2em;">
+					¡ Bienvenido al sistema! A continuación se le proporciona las herramientas necesarias para la gestión del rendimiento de sus estudiantes
 				</p>
+				
 			</div>
 			
 			<!-- Content -->
 			<div class="full-box tile-container">
 
 				<a href="{{ url_for('client_new')}}" class="tile">
-					<div class="tile-tittle">Clientes</div>
+					<div class="tile-tittle">Estudiantes</div>
 					<div class="tile-icon">
 						<i class="fas fa-users fa-fw"></i>
 						<p>5 Registrados</p>
