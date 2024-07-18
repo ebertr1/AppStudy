@@ -1,1 +1,17 @@
-[{"id": 1, "correoInstitucional": " sjsjsj@unl.edu.ec", "contrasenia": "12343344 "},{"id": 2, "correoInstitucional": " sjsjsj@unl.edu.ec", "contrasenia": "12343344 "},{"id": 3, "correoInstitucional": " sjsjsj@unl.edu.ec", "contrasenia": "12343344 "}]
+[
+    {
+        "id": 1,
+        "correoInstitucional": "busuario1@unl.edu.ec",
+        "contrasenia": "abc123"
+    },
+    {
+        "id": 2,
+        "correoInstitucional": "ausuario2@unl.edu.ec",
+        "contrasenia": "def456"
+    },
+    {
+        "id": 3,
+        "correoInstitucional": "usuario3@unl.edu.ec",
+        "contrasenia": "ghi789"
+    }
+]

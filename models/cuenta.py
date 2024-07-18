@@ -35,6 +35,8 @@ class Cuenta:
             "correoInstitucional": self._correoInstitucional,
             "contrasenia": self._contrasenia
         }
+    def __str__(self) -> str:
+        return self.__correoInstitucional + "  " 
     def deserializar(self, data):
         cuenta = Cuenta()
         cuenta._id = data['id']

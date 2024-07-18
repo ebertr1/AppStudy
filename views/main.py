@@ -12,6 +12,8 @@ from controls.parametrosDaoControl import ParametrosDaoControl
 from controls.docenteDaoControl import DocenteDaoControl
 from controls.personaDaoControl import PersonaDaoControl
 from controls.estudianteDaoControl import EstudianteDaoControl
+from controls.tda.linked.linkedList import Linked_List
+import random
 
 asig = AsignacionDaoControl()
 cu = CuentaDaoControl()
@@ -24,31 +26,7 @@ docnt= DocenteDaoControl()
 person = PersonaDaoControl()
 est = EstudianteDaoControl()
 try:
-<<<<<<< HEAD
     """param._parametros._aprendizajeAutonomo = '6'
-=======
-    person._persona._nombre = 'Juana'
-    person._persona._apellido = 'Lopez'
-    person._persona._direccion = 'Av. Universitaria'
-    person.save
-    
-    docnt._docente._nombre='Juan'
-    docnt._docente._apellido = 'Perez'
-    docnt._docente._direccion = 'Loja'
-    docnt._docente._tituloAcademico='Ingeniero en Sistemas'
-    docnt._docente._cubiculo='1'
-    docnt._docente._aniosExperiencia = '2'
-    docnt.save
-    
-    est._estudiante._nombre='Maria'
-    est._estudiante._apellido = 'Perez'
-    est._estudiante._direccion = 'Loja'
-    est._estudiante._numero_matricula = '1234567890'
-    est.save
-    
-
-    param._parametros._aprendizajeAutonomo = '6'
->>>>>>> origin/rama_isabel
     param._parametros._evaluacionUnidad = '7'
     param._parametros._aprendizajeDocente = '8'
     param._parametros._aprendizajeExperimental = '9'
@@ -82,5 +60,17 @@ try:
     cu._cuenta._contrasenia = '12343344 '
     cu.save
     cu._cuenta = None"""
+    listaS = Linked_List()
+    listaS.add("A", listaS._length)
+    listaS.add("B", listaS._length)
+    listaS.add("C", listaS._length)
+    listaS.add("D", listaS._length)
+    listaS.print
+    listaS.sort(1)
+    listaS.print
+    cu._list().print
+    listaAux = cu._list().sort_models("_correoInstitucional", 1)
+    listaAux.print
+   
 except Exception as e:
     print(e)

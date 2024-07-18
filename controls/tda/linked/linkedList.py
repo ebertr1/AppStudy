@@ -2,6 +2,8 @@ from controls.tda.linked.nodo import Node
 from controls.exception.linkedEmptyException import LinkedEmpty
 from controls.exception.arrayPositionException import ArrayPositionException
 from controls.tdaArray import TDAArray
+from numbers import Number
+from controls.tda.linked.ordenacion.quickSort import QuickSort
 class Linked_List(object):
     def __init__(self):
         self.__head = None
@@ -68,11 +70,8 @@ class Linked_List(object):
             node = self.getNode(pos)            
             node._data = data
             
-    @property
-    def toArray(self):
-        #TODO
-        pass
-    
+   
+
     def deleteFirst(self):
         if self.isEmpty:
             raise LinkedEmpty("List empty")
@@ -182,3 +181,55 @@ class Linked_List(object):
             node = node._next
         print("Lista de datos")
         print(data)
+
+    @property
+    def toArray(self):
+        #TODO
+        #array = TDAArray(self.__length)
+        array = []
+        if not self.isEmpty:
+            node = self.__head
+            cont = 0
+            while cont < self.__length:
+                array.append(node._data)
+                cont += 1
+                node = node._next
+        return array
+    
+
+    def toList(self, array):
+        self.clear
+        for i in range(0, len(array)):
+            self.__addLast__(array[i])
+    
+    def sort(self, type):
+        if self.isEmpty:
+            raise LinkedEmpty("List empty")
+        else:
+            array = self.toArray
+
+            if isinstance(array[0], Number) or isinstance(array[0], str):
+                order = QuickSort()
+                if type == 1:
+                    array = order.sort_quick_number_ascendent(array)
+                else:
+                    array = order.sort_quick_number_descendent(array)
+          
+        self.toList(array)
+
+    def sort_models(self, attribute, type = 1):
+        if self.isEmpty:
+            raise LinkedEmpty("List empty")
+        else:
+            array = self.toArray
+            if isinstance(array[0], object):
+                order = QuickSort()
+                if type == 1:
+                    array = order.sort_quick_models_ascendent(array, attribute)
+                else:
+                    array = order.sort_quick_models_descendent(array, attribute) 
+                    
+            self.toList(array)
+        return self
+    
+ 
