@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [{"id": 1, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 2, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 3, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 4, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"}]
@@ -7,3 +8,10 @@
 =======
 [{"id": 1, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 2, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 3, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 4, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 5, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"}]
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+[{"id": 1, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 2, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 3, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"}]
+=======
+[{"id": 1, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 2, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 3, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 4, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"},{"id": 5, "aprendizajeAutonomo": "6", "evaluacionUnidad": "7", "aprendizajeDocente": "8", "aprendizajeExperimental": "9", "lecciones": "10"}]
+>>>>>>> origin/rama_isabel
+>>>>>>> rama_eber

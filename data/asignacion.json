@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [{"id": 1, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 2, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"}]
@@ -7,3 +8,6 @@
 =======
 [{"id": 1, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 2, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 3, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 4, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"}]
 >>>>>>> Stashed changes
+=======
+[{"id": 1, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 2, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"},{"id": 3, "cedulaDocente": "1234567890", "paralelo": "A", "tipoIdentificacion": "CEDULA"}]
+>>>>>>> rama_eber

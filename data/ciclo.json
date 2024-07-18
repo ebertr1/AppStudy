@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [{"id": 1, "numeroCiclo": "1", "paralelo": "A"},{"id": 2, "numeroCiclo": "1", "paralelo": "A"}]
@@ -7,3 +8,6 @@
 =======
 [{"id": 1, "numeroCiclo": "1", "paralelo": "A"},{"id": 2, "numeroCiclo": "1", "paralelo": "A"},{"id": 3, "numeroCiclo": "1", "paralelo": "A"},{"id": 4, "numeroCiclo": "1", "paralelo": "A"}]
 >>>>>>> Stashed changes
+=======
+[{"id": 1, "numeroCiclo": "1", "paralelo": "A"},{"id": 2, "numeroCiclo": "1", "paralelo": "A"},{"id": 3, "numeroCiclo": "1", "paralelo": "A"}]
+>>>>>>> rama_eber
