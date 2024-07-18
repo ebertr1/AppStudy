@@ -10,8 +10,9 @@ body {
     align-items: center; /* Alinea verticalmente los elementos */
     justify-content: space-between; /* Espacio uniforme entre los elementos */
     padding: 25px; /* Añade espacio alrededor del encabezado */
-    background-image: url("/static/img/fondo.jpg"); /* Asegúrate de que la ruta sea correcta */
+    background-image: url("/static/img/fondocompu.jpg"); /* Asegúrate de que la ruta sea correcta */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el encabezado */
+    background-position: center;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: #d0d7da; /* Color de texto en el encabezado */
     width: 100%; /* Ajusta el ancho del encabezado al 100% */

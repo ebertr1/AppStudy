@@ -68,40 +68,40 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-graduation-cap fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclo</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de ciclo</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclo</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-book fa-fw"></i> &nbsp; Materias <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de materias</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materias</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
+									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Pendientes</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-th-list fa-fw"></i> &nbsp; Malla Curricular<i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
 									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
@@ -116,7 +116,7 @@
 						</li>
 
 						<li>
-							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
+							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Gráficos Estadísticos</a>
 						</li>
 					</ul>
 				</nav>
@@ -155,39 +155,36 @@
 					<div class="tile-tittle">Estudiantes</div>
 					<div class="tile-icon">
 						<i class="fas fa-users fa-fw"></i>
-						<p>5 Registrados</p>
 					</div>
 				</a>
 
-				<a href="{{ url_for ('item_list')}}" class="tile">
+				<a href="{{ url_for('item_list') }}" class="tile">
 					<div class="tile-tittle">Ciclos</div>
 					<div class="tile-icon">
-						<i class="fas fa-pallet fa-fw"></i>
-						<p>9 Registrados</p>
+						<i class="fas fa-graduation-cap fa-fw"></i> 
 					</div>
 				</a>
+				
 
 				<a href="{{ url_for ('reservation_list') }}" class="tile">
 					<div class="tile-tittle">Materias</div>
 					<div class="tile-icon">
-						<i class="fas fa-file-invoice-dollar fa-fw"></i>
-						<p>10 Registrados</p>
+						<i class="fas fa-book fa-fw"></i>
 					</div>
 				</a>
 
 				<a href="{{ url_for ('user_list')}}" class="tile">
 					<div class="tile-tittle">Malla Curricular</div>
 					<div class="tile-icon">
-						<i class="fas fa-user-secret fa-fw"></i>
-						<p>50 Registrados</p>
+						<i class="fas fa-th-list fa-fw"></i>
 					</div>
 				</a>
 
 				<a href="{{ url_for ('company') }}" class="tile">
-					<div class="tile-tittle">Empresa</div>
+					<div class="tile-tittle">Gráficos Estadísticos</div>
 					<div class="tile-icon">
-						<i class="fas fa-store-alt fa-fw"></i>
-						<p>1 Registrada</p>
+						<i class="fas fa-chart-pie fa-fw"></i>
+						<p></p>
 					</div>
 				</a>
 				

@@ -28,9 +28,9 @@
 <body>
     <from class="form-signin" action="/login" method="POST">
     <header class="header">
-        <img src="static/img/images.jpeg" alt="Logo de la Universidad" class="logo-left">
+        <img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo de la Universidad" class="logo-left">
         <h1>Bienvenido al Sistema de Seguimiento Estudiantil</h1>
-        <img src="static/img/logo_1.jpg" alt="Logo de la Universidad" class="logo-right">
+        <img src="{{ url_for('static', filename='img/cis.png') }}" alt="Logo de la carrera" style="width: 200px; height: auto;" class="logo-right">
     </header>
     <div class="container">
         <h2>INICIA SESIÓN</h2>
