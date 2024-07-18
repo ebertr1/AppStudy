@@ -18,7 +18,7 @@ ci = CicloDaoControl()
 mll = MallaDaoControl()
 param = ParametrosDaoControl()
 try:
-    param._parametros._aprendizajeAutonomo = '6'
+    """param._parametros._aprendizajeAutonomo = '6'
     param._parametros._evaluacionUnidad = '7'
     param._parametros._aprendizajeDocente = '8'
     param._parametros._aprendizajeExperimental = '9'
@@ -51,6 +51,6 @@ try:
     cu._cuenta._correoInstitucional = ' sjsjsj@unl.edu.ec'
     cu._cuenta._contrasenia = '12343344 '
     cu.save
-    cu._cuenta = None
+    cu._cuenta = None"""
 except Exception as e:
     print(e)

@@ -1,6 +1,7 @@
 from controls.tda.linked.nodo import Node
 from controls.exception.linkedEmptyException import LinkedEmpty
 from controls.exception.arrayPositionException import ArrayPositionException
+from controls.tdaArray import TDAArray
 class Linked_List(object):
     def __init__(self):
         self.__head = None
