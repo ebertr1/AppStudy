@@ -69,7 +69,7 @@ try:
     listaS.sort(1)
     listaS.print
     cu._list().print
-    listaAux = cu._list().sort_models("_correoInstitucional", 1)
+    listaAux = cu._list().sort_models("_correoInstitucional", 2)
     listaAux.print
    
 except Exception as e:
