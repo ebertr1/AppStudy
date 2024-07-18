@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+import pandas as pd
 from config import config
 
 # Crear la aplicación Flask
@@ -105,6 +106,39 @@ def user_update():
     return render_template('user-update.html')
 
 
+
+@app.route('/datos-excel')
+def datos_excel():
+    return render_template('datos-excel.html')
+
+@app.route('/inde', methods=['GET', 'POST'])
+def inde():
+    if request.method == 'POST':
+        # Verificar si se ha enviado un archivo
+        if 'excel_file' not in request.files:
+            return render_template('inde.html', error='No se ha seleccionado ningún archivo.')
+
+        file = request.files['excel_file']
+
+        # Verificar si se ha enviado un archivo vacío
+        if file.filename == '':
+            return render_template('inde.html', error='No se ha seleccionado ningún archivo.')
+
+        # Verificar si el archivo es Excel
+        if not file.filename.endswith(('.xls', '.xlsx')):
+            return render_template('inde.html', error='El archivo seleccionado no es un archivo Excel válido.')
+
+        try:
+            # Leer el archivo Excel en un DataFrame
+            df = pd.read_excel(file, sheet_name=None)
+            
+            # Renderizar la plantilla HTML con los datos del DataFrame
+            return render_template('datos-excel.html', excel_data=df)
+
+        except Exception as e:
+            return render_template('inde.html', error=f'Error al procesar el archivo Excel: {str(e)}')
+
+    return render_template('inde.html')
 
 # Punto de entrada para ejecutar la aplicación
 if __name__ == '__main__':
