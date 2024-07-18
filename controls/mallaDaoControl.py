@@ -1,20 +1,23 @@
 from typing import Type
-from controls.tda.linked.linkedList import LinkedList
+from controls.tda.linked.linkedList import Linked_List
 from controls.dao.daoAdapter import DaoAdapter
 from models.malla import Malla
 
 class MallaDaoControl(DaoAdapter):
     def __init__(self):
-        self.__malla = Malla()
-        self.__lista = LinkedList()
+        super().__init__(Malla)
+        self.__malla = None
 
     @property
     def _malla(self):
+        if self.__malla is None:
+            self.__malla = Malla()
         return self.__malla
 
     @_malla.setter
     def _malla(self, value):
         self.__malla = value
+
 
     @property
     def _lista(self):
@@ -22,4 +25,5 @@ class MallaDaoControl(DaoAdapter):
     
     @property
     def save(self):
-        self._lista.add(self._materia, self._lista._length)   
+        self.__malla._id = self._lista._length + 1
+        self._save(self.__malla)
