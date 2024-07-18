@@ -3,7 +3,7 @@ class Persona:
         self.__id=0
         self.__nombre= ''
         self.__apellido=''
-        self.__dirección= ''
+        self.__direccion= ''
 
     @property
     def _id(self):
@@ -31,11 +31,11 @@ class Persona:
 
     @property
     def _dirección(self):
-        return self.__dirección
+        return self.__direccion
 
     @_dirección.setter
     def _dirección(self, value):
-        self.__dirección = value
+        self.__direccion = value
         
     @property
     def serializable(self):
@@ -43,14 +43,14 @@ class Persona:
             'id': self.__id,
             'nombre': self.__nombre,
             'apellido': self.__apellido,
-            'dirección': self.__dirección
+            'direccion': self.__direccion
         }   
         
     def deserializar(self, data):
         self.__id = data['id']
         self.__nombre= data['nombre']
         self.__apellido = data['apellido']
-        self.__dirección = data['dirección']
+        self.__direccion = data['direccion']
         return self
 
         

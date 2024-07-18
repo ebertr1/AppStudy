@@ -9,6 +9,9 @@ from controls.unidadDaoControl import UnidadDaoControl
 from controls.cicloDaoControl import CicloDaoControl
 from controls.mallaDaoControl import MallaDaoControl
 from controls.parametrosDaoControl import ParametrosDaoControl
+from controls.docenteDaoControl import DocenteDaoControl
+from controls.personaDaoControl import PersonaDaoControl
+from controls.estudianteDaoControl import EstudianteDaoControl
 
 asig = AsignacionDaoControl()
 cu = CuentaDaoControl()
@@ -17,7 +20,30 @@ u = UnidadDaoControl()
 ci = CicloDaoControl()
 mll = MallaDaoControl()
 param = ParametrosDaoControl()
+docnt= DocenteDaoControl()
+person = PersonaDaoControl()
+est = EstudianteDaoControl()
 try:
+    person._persona._nombre = 'Juana'
+    person._persona._apellido = 'Lopez'
+    person._persona._direccion = 'Av. Universitaria'
+    person.save
+    
+    docnt._docente._nombre='Juan'
+    docnt._docente._apellido = 'Perez'
+    docnt._docente._direccion = 'Loja'
+    docnt._docente._tituloAcademico='Ingeniero en Sistemas'
+    docnt._docente._cubiculo='1'
+    docnt._docente._aniosExperiencia = '2'
+    docnt.save
+    
+    est._estudiante._nombre='Maria'
+    est._estudiante._apellido = 'Perez'
+    est._estudiante._direccion = 'Loja'
+    est._estudiante._numero_matricula = '1234567890'
+    est.save
+    
+
     param._parametros._aprendizajeAutonomo = '6'
     param._parametros._evaluacionUnidad = '7'
     param._parametros._aprendizajeDocente = '8'
