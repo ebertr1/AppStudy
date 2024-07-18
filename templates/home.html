@@ -29,7 +29,6 @@
 	<!-- General Styles -->
 	<link rel="stylesheet" href="/static/css/style.css">
 
-
 </head>
 <body>
 	
@@ -43,27 +42,27 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="/static/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
+						Carlos Alfaro <br><small class="roboto-condensed-light">Usuario</small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>
 				<nav class="full-box nav-lateral-menu">
 					<ul>
 						<li>
-							<a href="{{ url_for('home') }}"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
+							<a href="{{ url_for('home') }}"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Panel</a>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Clientes <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Estudiantes<i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Cliente</a>
+									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar estudiante </a>
 								</li>
 								<li>
-									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de clientes</a>
+									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de estudiantes</a>
 								</li>
 								<li>
-									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
+									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar estudiantes</a>
 								</li>
 							</ul>
 						</li>
@@ -72,7 +71,7 @@
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="i{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
 								</li>
 								<li>
 									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
@@ -117,7 +116,7 @@
 						</li>
 
 						<li>
-							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Empresa</a>
+							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
 						</li>
 					</ul>
 				</nav>
@@ -140,19 +139,20 @@
 
 			<!-- Page header -->
 			<div class="full-box page-header">
-				<h3 class="text-left">
-					<i class="fab fa-dashcube fa-fw"></i> &nbsp; DASHBOARD
-				</h3>
-				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
+				<h3 class="text-center d-flex align-items-center justify-content-center">
+					<img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo" style="height: 100px;"> &nbsp; <strong style="font-size: 2em;">UNIVERSIDAD NACIONAL DE LOJA</strong>
+				</h3>												
+				<p class="text-justify" style="font-size: 1.2em;">
+					¡ Bienvenido al sistema! A continuación se le proporciona las herramientas necesarias para la gestión del rendimiento de sus estudiantes
 				</p>
+				
 			</div>
 			
 			<!-- Content -->
 			<div class="full-box tile-container">
 
 				<a href="{{ url_for('client_new')}}" class="tile">
-					<div class="tile-tittle">Clientes</div>
+					<div class="tile-tittle">Estudiantes</div>
 					<div class="tile-icon">
 						<i class="fas fa-users fa-fw"></i>
 						<p>5 Registrados</p>
@@ -160,7 +160,7 @@
 				</a>
 
 				<a href="{{ url_for ('item_list')}}" class="tile">
-					<div class="tile-tittle">Items</div>
+					<div class="tile-tittle">Ciclos</div>
 					<div class="tile-icon">
 						<i class="fas fa-pallet fa-fw"></i>
 						<p>9 Registrados</p>
@@ -168,7 +168,7 @@
 				</a>
 
 				<a href="{{ url_for ('reservation_list') }}" class="tile">
-					<div class="tile-tittle">Prestamos</div>
+					<div class="tile-tittle">Materias</div>
 					<div class="tile-icon">
 						<i class="fas fa-file-invoice-dollar fa-fw"></i>
 						<p>10 Registrados</p>
@@ -176,7 +176,7 @@
 				</a>
 
 				<a href="{{ url_for ('user_list')}}" class="tile">
-					<div class="tile-tittle">Usuarios</div>
+					<div class="tile-tittle">Malla Curricular</div>
 					<div class="tile-icon">
 						<i class="fas fa-user-secret fa-fw"></i>
 						<p>50 Registrados</p>

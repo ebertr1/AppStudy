@@ -34,12 +34,22 @@ class Asignacion:
     def _tipoIdentificacion(self):
         return self.__tipoIdentificacion
 
-    @_tipoIdentificacion.setter
-    def _tipoIdentificacion(self, value):
-        self.__tipoIdentificacion = value
 
-    @property
-    def serializable(self):
+   
+@property
+def serializable(self):
+    return {
+        'id': self.__id,
+        'cedulaDocente': self.__cedulaDocente,
+        'paralelo': self.__paralelo,
+        'numeroIdentificacion': self.__numeroIdentificacion
+    }
+
+
+
+
+@property
+def serializable(self):
         return {
             "id": self._id,
             "cedulaDocente": self._cedulaDocente,
@@ -47,7 +57,7 @@ class Asignacion:
             "tipoIdentificacion": self._tipoIdentificacion.__str__()
         }
     
-    def deserializar(self, data):
+def deserializar(self, data):
         asignacion = Asignacion()
         asignacion._id = data['id']
         asignacion._cedulaDocente = data['cedulaDocente']
