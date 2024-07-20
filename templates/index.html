@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Login</title>
+	<title>Iniciar Sesión</title>
 
 
 
@@ -20,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIA SESIÓN</title>
+    <title>INICIAR SESIÓN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Agrega Font Awesome -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
@@ -29,7 +29,7 @@
     <from class="form-signin" action="/login" method="POST">
     <header class="header">
         <img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo de la Universidad" class="logo-left">
-        <h1>Bienvenido al Sistema de Seguimiento Estudiantil</h1>
+        <h1>Bienvenido al Sistema de Seguimiento Estudiantil - SSDE</h1>
         <img src="{{ url_for('static', filename='img/cis.png') }}" alt="Logo de la carrera" style="width: 200px; height: auto;" class="logo-right">
     </header>
     <div class="container">
@@ -38,8 +38,7 @@
             <input type="text" name="username" placeholder="Nombre de usuario" required>
             <input type="password" name="password" placeholder="Contraseña" required>
         
-            <a href="{{ url_for('home') }}" class="btn btn-secondary">LOG IN</a>
-		
+            <a href="{{ url_for('home') }}" class="btn btn-outline-primary">INICIAR SESIÓN</a>
         </form>
        
         <p>¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a>.</p>
