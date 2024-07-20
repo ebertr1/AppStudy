@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Buscar clientes</title>
+	<title>Buscar estudiantes</title>
 
 	<!-- Normalize V8.0.1 -->
 	<link rel="stylesheet" href="/static/css/normalize.css">
@@ -54,55 +54,55 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Clientes <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Estudiantes <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Cliente</a>
+									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar estudiantes</a>
 								</li>
 								<li>
-									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de clientes</a>
+									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de estudiantes</a>
 								</li>
 								<li>
-									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar cliente</a>
+									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar estudiantes</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclo</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de ciclos</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclos</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Materia <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
+									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Pendientes</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Malla Curricular <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
 									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
@@ -141,23 +141,23 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE
+					<i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTES
 				</h3>
 				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
+					Acceso a la lista de estudiantes de la carrera de Computación de la Universidad Nacional de Loja, aquí podrá buscar estudiantes matriculados en esta carrera.
 				</p>
 			</div>
 
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE</a>
 					</li>
 					<li>
-						<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+						<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ESTUDIANTE</a>
 					</li>
 					<li>
-						<a class="active" href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+						<a class="active" href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTE</a>
 					</li>
 				</ul>	
 			</div>
@@ -169,7 +169,7 @@
 						<div class="row justify-content-md-center">
 							<div class="col-12 col-md-6">
 								<div class="form-group">
-									<label for="inputSearch" class="bmd-label-floating">¿Qué cliente estas buscando?</label>
+									<label for="inputSearch" class="bmd-label-floating">¿Qué estudiante estas buscando?</label>
 									<input type="text" class="form-control" name="busqueda-" id="inputSearch" maxlength="30">
 								</div>
 							</div>
