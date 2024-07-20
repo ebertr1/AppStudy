@@ -130,7 +130,7 @@
 				<a href="#" class="float-left show-nav-lateral">
 					<i class="fas fa-exchange-alt"></i>
 				</a>
-				<a href="user-update.html">
+				<a href="{{ url_for('user_update') }}">
 					<i class="fas fa-user-cog"></i>
 				</a>
 				<a href="#" class="btn-exit-system">
@@ -150,13 +150,13 @@
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE</a>
+						<a href="{{ url_for('client_new') }}"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE</a>
 					</li>
 					<li>
-						<a href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ESTUDIANTES</a>
+						<a href="{{ url_for('client_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ESTUDIANTES</a>
 					</li>
 					<li>
-						<a class="active" href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTE</a>
+						<a class="active" href="{{ url_for('client_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTE</a>
 					</li>
 				</ul>	
 			</div>
@@ -226,7 +226,7 @@
 								<td>APELLIDO DEL ESTUDIANTE</td>
 								<td>72349874</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="{{ url_for('user_update') }}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -245,7 +245,7 @@
 								<td>APELLIDO DEL ESTUDIANTE</td>
 								<td>72349874</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="{{ url_for('user_update') }}"class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -264,7 +264,7 @@
 								<td>APELLIDO DEL CLIENTE</td>
 								<td>72349874</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="{{ url_for('user_update') }}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
@@ -283,7 +283,7 @@
 								<td>APELLIDO DEL CLIENTE</td>
 								<td>72349874</td>
 								<td>
-									<a href="client-update.html" class="btn btn-success">
+									<a href="{{ url_for('user_update') }}" class="btn btn-success">
 	  									<i class="fas fa-sync-alt"></i>	
 									</a>
 								</td>
