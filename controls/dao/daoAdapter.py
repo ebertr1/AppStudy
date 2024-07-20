@@ -1,5 +1,5 @@
 from typing import TypeVar, Generic, List
-from controls.tda.linked.linkedList import LinkedList
+from controls.tda.linked.linkedList import Linked_List
 import os.path
 import json
 import os
@@ -9,7 +9,7 @@ class DaoAdapter(Generic[T]):
     atype: T
     def __init__(self, atype: T):
         self.atype = atype
-        self.lista = LinkedList()
+        self.lista = Linked_List()
         self.file = atype.__name__.lower() + ".json"
         self.URL = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+"/data/"
 

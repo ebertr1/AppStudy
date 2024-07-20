@@ -9,6 +9,11 @@ from controls.unidadDaoControl import UnidadDaoControl
 from controls.cicloDaoControl import CicloDaoControl
 from controls.mallaDaoControl import MallaDaoControl
 from controls.parametrosDaoControl import ParametrosDaoControl
+from controls.docenteDaoControl import DocenteDaoControl
+from controls.personaDaoControl import PersonaDaoControl
+from controls.estudianteDaoControl import EstudianteDaoControl
+from controls.tda.linked.linkedList import Linked_List
+import random
 
 asig = AsignacionDaoControl()
 cu = CuentaDaoControl()
@@ -17,8 +22,11 @@ u = UnidadDaoControl()
 ci = CicloDaoControl()
 mll = MallaDaoControl()
 param = ParametrosDaoControl()
+docnt= DocenteDaoControl()
+person = PersonaDaoControl()
+est = EstudianteDaoControl()
 try:
-    param._parametros._aprendizajeAutonomo = '6'
+    """param._parametros._aprendizajeAutonomo = '6'
     param._parametros._evaluacionUnidad = '7'
     param._parametros._aprendizajeDocente = '8'
     param._parametros._aprendizajeExperimental = '9'
@@ -51,9 +59,18 @@ try:
     cu._cuenta._correoInstitucional = ' sjsjsj@unl.edu.ec'
     cu._cuenta._contrasenia = '12343344 '
     cu.save
-    cu._cuenta = None
-
+    cu._cuenta = None"""
+    listaS = Linked_List()
+    listaS.add("A", listaS._length)
+    listaS.add("B", listaS._length)
+    listaS.add("C", listaS._length)
+    listaS.add("D", listaS._length)
+    listaS.print
+    listaS.sort(1)
+    listaS.print
+    cu._list().print
+    listaAux = cu._list().sort_models("_correoInstitucional", 2)
+    listaAux.print
    
-
 except Exception as e:
     print(e)

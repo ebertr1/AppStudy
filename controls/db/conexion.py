@@ -1,25 +1,25 @@
+import pyodbc
 
-import oracledb
+# Configuración de la conexión
+username = 'user_developer'
+password = '123456'
+dsn = '64'  # Nombre del DSN configurado en ODBC
 
-class Conexion():
-    def __init__(self):
-        self.__db = None 
+# Crear una conexión
+try:
+    connection = pyodbc.connect('DSN=' + dsn + ';UID=' + username + ';PWD=' + password)
 
-    @property
-    def _db(self):
-        return self.__db
+    # Información del servidor Oracle
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM V$VERSION')
+    row = cursor.fetchone()
+    print("Versión del servidor:", row)
 
-    @_db.setter
-    def _db(self, value):
-        self.__db = value
-  
-    def connection(self, user= 'user_developer', password='123456', dsn='localhost:1521/xe'):
-       try:
-           self.__db = oracledb.connect(user, password, dsn)
-           print('Conexion exitosa')
-           return self.__db
-       except Exception as e:
-            print(e)
-            return None
-    def close(self):
-        self.__db.close()
+except pyodbc.Error as error:
+    print("Error al conectar a Oracle:", error)
+
+finally:
+    # Cerrar la conexión al finalizar
+    if 'connection' in locals():
+        connection.close()
+        print("Conexión cerrada.")
