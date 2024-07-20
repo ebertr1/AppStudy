@@ -43,7 +43,7 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="/static/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
+						Carlos Alfaro <br><small class="roboto-condensed-light">Usuario</small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>
@@ -69,40 +69,40 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-graduation-cap fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclo</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de ciclos</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclo</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-book fa-fw"></i> &nbsp; Materias <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de materias</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
+									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Pendientes</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-th-list fa-fw"></i> &nbsp; Malla Curricular <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
 									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
@@ -117,7 +117,7 @@
 						</li>
 
 						<li>
-							<a href="{{ url_for ('company') }}"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
+							<a href="{{ url_for ('company') }}"><i class="fas fa-chart-pie fa-fw"></i> &nbsp; Gráficos Estadísticos</a>
 						</li>
 					</ul>
 				</nav>
@@ -137,15 +137,14 @@
 					<i class="fas fa-power-off"></i>
 				</a>
 			</nav>
-
+			<h3 class="text-center d-flex align-items-center justify-content-center">
+				<img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo" style="height: 100px;"> &nbsp; <strong style="font-size: 2em;">UNIVERSIDAD NACIONAL DE LOJA</strong>
+			</h3>
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
 					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE
 				</h3>
-				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem odit amet asperiores quis minus, dolorem repellendus optio doloremque error a omnis soluta quae magnam dignissimos, ipsam, temporibus sequi, commodi accusantium!
-				</p>
 			</div>
 
 			<div class="container-fluid">
