@@ -15,16 +15,21 @@
             background: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin: auto;
         }
         .header-buttons {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
         }
+        .table-responsive {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
         }
         th, td {
             border: 1px solid #dddddd;
@@ -39,26 +44,32 @@
 <body>
     <div class="container">
         <div class="header-buttons">
-            <a href="{{ url_for ('home') }}"" class="btn btn-secondary">Volver</a>
+            <a href="{{ url_for('home') }}" class="btn btn-secondary">Volver</a>
             <button class="btn btn-primary" onclick="guardarDatos()">Guardar</button>
         </div>
         <h1>Datos desde Excel</h1>
         {% for categoria, datos in excel_data.items() %}
         <h2>{{ categoria }}</h2>
-        <table>
-            <tr>
-                {% for columna in datos.columns %}
-                <th>{{ columna }}</th>
-                {% endfor %}
-            </tr>
-            {% for index, row in datos.iterrows() %}
-            <tr>
-                {% for valor in row %}
-                <td>{{ valor }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </table>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        {% for columna in datos.columns %}
+                        <th>{{ columna }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for index, row in datos.iterrows() %}
+                    <tr>
+                        {% for valor in row %}
+                        <td>{{ valor }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
         {% endfor %}
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

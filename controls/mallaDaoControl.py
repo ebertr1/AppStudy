@@ -26,4 +26,9 @@ class MallaDaoControl(DaoAdapter):
     @property
     def save(self):
         self.__malla._id = self._lista._length + 1
+<<<<<<< HEAD
+        self._save(self.__malla)  
+        
+=======
         self._save(self.__malla)
+>>>>>>> main
