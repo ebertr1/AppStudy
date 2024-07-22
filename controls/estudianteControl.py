@@ -22,6 +22,7 @@ class EstudianteControl():
         self.__lista = value
 
 
+    
 
     @_lista.setter
     def _lista(self, value):

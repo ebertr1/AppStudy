@@ -26,4 +26,3 @@ class UnidadDaoControl(DaoAdapter):
     def save(self):
         self.__unidad._id = self._lista._length + 1
         self._save(self.__unidad)
-

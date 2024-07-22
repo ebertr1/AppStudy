@@ -25,4 +25,3 @@ class cuentaControl():
     @property
     def save(self):
         self._lista.add(self._rol, self._lista._length)    
-
