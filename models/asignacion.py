@@ -64,3 +64,4 @@ def deserializar(self, data):
         asignacion._paralelo = data['paralelo']
         asignacion._tipoIdentificacion = data['tipoIdentificacion']
         return asignacion 
+
