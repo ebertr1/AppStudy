@@ -126,14 +126,14 @@
 		<!-- Page content -->
 		<section class="full-box page-content">
 			<nav class="full-box navbar-info">
-				<a href="#" class="float-left show-nav-lateral">
+				<a href="{{ url_for('logout') }}" class="float-left show-nav-lateral">
 					<i class="fas fa-exchange-alt"></i>
 				</a>
 				<a href="{{ url_for ('user_update')}}">
 					<i class="fas fa-user-cog"></i>
 				</a>
-				<a href="#" class="btn-exit-system">
-					<i class="fas fa-power-off"></i>
+				<a href="{{ url_for('logout') }}" class="btn-exit-system">
+					<i class="fas fa-power-off"></i> Cerrar sesión
 				</a>
 			</nav>
 
@@ -194,8 +194,7 @@
 		</section>
 	</main>
 	
-	
-	<!--=============================================
+	<!--==============================================
 	=            Include JavaScript files           =
 	==============================================-->
 	<!-- jQuery V3.4.1 -->
@@ -203,6 +202,7 @@
 
 	<!-- popper -->
 	<script src="/static/js/popper.min.js" ></script>
+	<script src="/static/js/sweetalert2.min.js"></script>
 
 	<!-- Bootstrap V4.3 -->
 	<script src="/static/js/bootstrap.min.js" ></script>
