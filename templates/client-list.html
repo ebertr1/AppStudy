@@ -45,7 +45,7 @@
 					
 					<img src="/static/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light">Web Developer</small>
+						Carlos Alfaro <br><small class="roboto-condensed-light">Usuario</small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>
@@ -62,7 +62,11 @@
 									<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar estudiante</a>
 								</li>
 								<li>
+<<<<<<< HEAD
+									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista estudiantes</a>
+=======
 									<a href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de estudiantes</a>
+>>>>>>> origin/rama_fermin
 								</li>
 								<li>
 									<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar estudiante</a>
@@ -73,6 +77,18 @@
 						</li>
 
 						<li>
+<<<<<<< HEAD
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-graduation-cap fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclo</a>
+								</li>
+								<li>
+									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de ciclos</a>
+								</li>
+								<li>
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclo</a>
+=======
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
@@ -83,30 +99,31 @@
 								</li>
 								<li>
 									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Ciclos</a>
+>>>>>>> origin/rama_fermin
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Préstamos <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-book fa-fw"></i> &nbsp; Materias <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo préstamo</a>
+									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva materia</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de préstamos</a>
+									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de materias</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar préstamos</a>
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materias</a>
 								</li>
 								<li>
-									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Préstamos pendientes</a>
+									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Pendientes</a>
 								</li>
 							</ul>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-th-list fa-fw"></i> &nbsp; Malla Curricular <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
 									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
@@ -121,7 +138,7 @@
 						</li>
 
 						<li>
-							<a href="{{ url_for ('company') }})"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Equipo</a>
+							<a href="{{ url_for ('company') }})"><i class="fas fa-chart-pie fa-fw"></i> &nbsp; Gráficos Estadísticos</a>
 						</li>
 					</ul>
 				</nav>
@@ -142,26 +159,33 @@
 				</a>
 			</nav>
 
+			<h3 class="text-center d-flex align-items-center justify-content-center">
+				<img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo" style="height: 100px;"> &nbsp; <strong style="font-size: 2em;">UNIVERSIDAD NACIONAL DE LOJA</strong>
+			</h3>
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
 					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ESTUDIANTES
 				</h3>
+<<<<<<< HEAD
+				
+=======
 				<p class="text-justify">
 					Acceso a la lista de estudiantes de la carrera de Computación de la Universidad Nacional de Loja, aquí podrá agregar, actualizar o eliminar estudiantes.
 				</p>
+>>>>>>> origin/rama_fermin
 			</div>
 
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+						<a href="{{ url_for('client_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE</a>
 					</li>
 					<li>
-						<a class="active" href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+						<a class="active" href="{{ url_for('client_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ESTUDIANTES</a>
 					</li>
 					<li>
-						<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+						<a href="{{ url_for('client_search')}}"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTE</a>
 					</li>
 				</ul>	
 			</div>

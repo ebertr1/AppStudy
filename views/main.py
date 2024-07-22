@@ -13,8 +13,10 @@ from controls.docenteDaoControl import DocenteDaoControl
 from controls.personaDaoControl import PersonaDaoControl
 from controls.estudianteDaoControl import EstudianteDaoControl
 from controls.tda.linked.linkedList import Linked_List
+from controls.personaDaoControl import PersonaDaoControl
 import random
 
+p = PersonaDaoControl()
 asig = AsignacionDaoControl()
 cu = CuentaDaoControl()
 r = RolDaoControl()
@@ -59,7 +61,7 @@ try:
     cu._cuenta._correoInstitucional = ' sjsjsj@unl.edu.ec'
     cu._cuenta._contrasenia = '12343344 '
     cu.save
-    cu._cuenta = None"""
+    cu._cuenta = None
     listaS = Linked_List()
     listaS.add("A", listaS._length)
     listaS.add("B", listaS._length)
@@ -70,7 +72,13 @@ try:
     listaS.print
     cu._list().print
     listaAux = cu._list().sort_models("_correoInstitucional", 2)
-    listaAux.print
-   
+    listaAux.print"""
+    #p._persona._id = 1
+    p._persona._apellido = 'GIla'
+    p._persona._nombre = 'Juan'
+    p._persona._direccion = 'Quito'
+    p.save
+    p._persona = None
+
 except Exception as e:
     print(e)

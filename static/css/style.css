@@ -504,8 +504,117 @@ table form{
     left: 0;
     z-index: 1;
     transition: all .2s ease-in-out;
-    background-color: #1fb41f;
+    background-color: #464e9e;
     background-image: none;
     background-position: center center;
     background-size: cover;
 }
+
+/* ---------- General responsive styles ---------- */
+
+@media (max-width: 767px) {
+    .page-header {
+        padding: 20px 10px 40px 10px;
+    }
+
+    .page-nav-tabs li {
+        margin: 5px 10px;
+    }
+
+    .page-nav-tabs li a {
+        font-size: 14px;
+    }
+
+    .nav-lateral {
+        width: 100%;
+        background-image: none;
+        display: none;
+    }
+
+    .nav-lateral.active {
+        display: block;
+        z-index: 9999;
+    }
+
+    .nav-lateral-bg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(3, 3, 3, .4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .nav-lateral-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-300px);
+        transition: transform .3s ease-in-out;
+        background-color: var(--color-two);
+    }
+
+    .nav-lateral.active .nav-lateral-content {
+        transform: translateX(0);
+    }
+
+    .nav-lateral-avatar i {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+
+    .page-content {
+        padding-left: 0;
+    }
+
+    .login-content {
+        width: 90%;
+    }
+
+    .tile {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .page-header > :nth-child(2) {
+        font-size: 1.2em;
+    }
+
+    .page-nav-tabs li {
+        margin: 5px 15px;
+    }
+
+    .page-nav-tabs li a {
+        font-size: 16px;
+    }
+
+    .tile {
+        width: 48%;
+        margin: 10px 1%;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-header > :nth-child(2) {
+        font-size: 1.5em;
+    }
+
+    .page-nav-tabs li {
+        margin: 5px 20px;
+    }
+
+    .page-nav-tabs li a {
+        font-size: 17px;
+    }
+
+    .tile {
+        width: 200px;
+    }
+}
+

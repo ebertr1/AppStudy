@@ -22,7 +22,6 @@ class PersonaDaoControl(DaoAdapter):
     
     @property
     def save(self):
-        self.__persona._id = self._lista._length + 1
-        self._save(self.__persona)
+        self._save(self._persona)
 
         
