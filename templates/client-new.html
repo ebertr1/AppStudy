@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Nuevo cliente</title>
+	<title>Nuevo estudiante</title>
 
 	<!-- Normalize V8.0.1 -->
 	<link rel="stylesheet" href="/static/css/normalize.css">
@@ -69,22 +69,37 @@
 						</li>
 
 						<li>
+<<<<<<< HEAD
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-graduation-cap fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
 									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclo</a>
+=======
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Ciclos <i class="fas fa-chevron-down"></i></a>
+							<ul>
+								<li>
+									<a href="{{ url_for ('item_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar ciclos</a>
+>>>>>>> origin/rama_fermin
 								</li>
 								<li>
 									<a href="{{ url_for ('item_list')}}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de ciclos</a>
 								</li>
 								<li>
+<<<<<<< HEAD
 									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclo</a>
+=======
+									<a href="{{ url_for ('item_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar ciclos</a>
+>>>>>>> origin/rama_fermin
 								</li>
 							</ul>
 						</li>
 
 						<li>
+<<<<<<< HEAD
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-book fa-fw"></i> &nbsp; Materias <i class="fas fa-chevron-down"></i></a>
+=======
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-file-invoice-dollar fa-fw"></i> &nbsp; Materias <i class="fas fa-chevron-down"></i></a>
+>>>>>>> origin/rama_fermin
 							<ul>
 								<li>
 									<a href="{{ url_for ('reservation_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nueva materia</a>
@@ -93,7 +108,11 @@
 									<a href="{{ url_for ('reservation_list') }}"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de materias</a>
 								</li>
 								<li>
+<<<<<<< HEAD
 									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materia</a>
+=======
+									<a href="{{ url_for ('reservation_search')}}"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar materias</a>
+>>>>>>> origin/rama_fermin
 								</li>
 								<li>
 									<a href="{{ url_for ('reservation_pending')}}"><i class="fas fa-hand-holding-usd fa-fw"></i> &nbsp; Pendientes</a>
@@ -102,7 +121,11 @@
 						</li>
 
 						<li>
+<<<<<<< HEAD
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-th-list fa-fw"></i> &nbsp; Malla Curricular <i class="fas fa-chevron-down"></i></a>
+=======
+							<a href="#" class="nav-btn-submenu"><i class="fas  fa-user-secret fa-fw"></i> &nbsp; Malla Curricular <i class="fas fa-chevron-down"></i></a>
+>>>>>>> origin/rama_fermin
 							<ul>
 								<li>
 									<a href="{{ url_for ('user_new')}}"><i class="fas fa-plus fa-fw"></i> &nbsp; Nuevo usuario</a>
@@ -145,6 +168,12 @@
 				<h3 class="text-left">
 					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ESTUDIANTE
 				</h3>
+<<<<<<< HEAD
+=======
+				<p class="text-justify">
+					Acceso a la lista de estudiantes de la carrera de Computación de la Universidad Nacional de Loja, aquí podrá agregar, actualizar o eliminar estudiantes.
+				</p>
+>>>>>>> origin/rama_fermin
 			</div>
 
 			<div class="container-fluid">
@@ -158,47 +187,14 @@
 					<li>
 						<a href="{{ url_for('client_search') }}"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ESTUDIANTE</a>
 					</li>
+					<li>
+						<a href="{{ url_for ('inde') }}"><i class="fas fa-search fa-fw"></i> &nbsp; SUBIR EXCEL</a>
+					</li>
 				</ul>	
 			</div>
 			
 			<!-- Content here-->
-			<div class="container-fluid">
-				<form action="" class="form-neon" autocomplete="off">
-					<fieldset>
-						<legend><i class="fas fa-user"></i> &nbsp; Información básica</legend>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-12 col-md-6">
-									<div class="form-group">
-										<label for="cliente_dni" class="bmd-label-floating">DNI</label>
-										<input type="text" pattern="[a-zA-Z0-9-]{1,27}" class="form-control" id="cliente_dni" id="cliente_dni" maxlength="27">
-									</div>
-								</div>
-								<div class="col-12 col-md-6">
-									<div class="form-group">
-										<label for="cliente_nombre" class="bmd-label-floating">Nombre</label>
-										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_nombre" id="cliente_nombre" maxlength="40">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_apellido" class="bmd-label-floating">Apellido</label>
-										<input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" name="cliente_apellido" id="cliente_apellido" maxlength="40">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_telefono" class="bmd-label-floating">Teléfono</label>
-										<input type="text" pattern="[0-9()+]{1,20}" class="form-control" name="cliente_telefono" id="cliente_telefono" maxlength="20">
-									</div>
-								</div>
-								<div class="col-12 col-md-4">
-									<div class="form-group">
-										<label for="cliente_direccion" class="bmd-label-floating">Dirección</label>
-										<input type="text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ#- ]{1,150}" class="form-control" name="cliente_direccion" id="cliente_direccion" maxlength="150">
-									</div>
-								</div>
-							</div>
+		
 						</div>
 					</fieldset>
 					<br><br><br>

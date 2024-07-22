@@ -25,4 +25,5 @@ class materiaDaoControl(DaoAdapter):
 
     @property
     def save(self):
-        self._lista.add(self._materia, self._lista._length)    
+        self.__materia._id = self._lista._length + 1
+        self._save(self.__materia)  
