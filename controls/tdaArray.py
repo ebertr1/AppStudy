@@ -75,3 +75,4 @@ class TDAArray():
             
 
     # proyectar cuantos se van a queda, quien tiene el mejor rendimirnto por cada materia, 
+    

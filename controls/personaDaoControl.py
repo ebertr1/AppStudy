@@ -23,5 +23,3 @@ class PersonaDaoControl(DaoAdapter):
     @property
     def save(self):
         self._save(self._persona)
-
-        

@@ -18,7 +18,6 @@ class EstudianteDaoControl(DaoAdapter):
 
 
     
-    
     @property
     def _lista(self):
         return self._list()
