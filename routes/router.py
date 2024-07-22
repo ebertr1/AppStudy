@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 import pandas as pd
-
+import re
 import oracledb
 # Crear la aplicación Flask
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 app.secret_key = 'B!1weNAt1T^%kvhUI*S^'
 # Configurar la aplicación desde el objeto de configuración
 
-ORACLE_USER = 'user_developer'
-ORACLE_PASSWORD = '123456'
+ORACLE_USER = 'user_pis'
+ORACLE_PASSWORD = 'eber2005'
 ORACLE_DSN = 'localhost:1521/xe'
 
 def get_db_connection():
@@ -20,30 +20,51 @@ def get_db_connection():
     return connection
 # Definir las rutas
 
+
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-
-        connection = get_db_connection()
-        cursor = connection.cursor()
-
-        cursor.execute("""
-            SELECT clave 
-            FROM cuenta 
-            WHERE correoinstitucional = :username
-        """, [username])
-
+        
+        # Verificar formato del correo electrónico
+        if not re.match(r'^[a-zA-Z0-9._%+-]+@unl\.edu\.ec$', username):
+            flash('El correo electrónico debe terminar en @unl.edu.ec', 'danger')
+            return render_template('index.html')
+        
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Consulta para verificar las credenciales del usuario
+        cursor.execute(
+            "SELECT idcuenta FROM cuenta WHERE correoinstitucional = :username AND clave = :password",
+            {'username': username, 'password': password}
+        )
+        
         user = cursor.fetchone()
-
-        if user and user[0] == password:
-            session['username'] = username
-            return redirect(url_for('home'))
+        
+        if user:
+            # Verificar que no haya resultados duplicados
+            if cursor.fetchall():
+                flash('Se encontraron múltiples usuarios con las mismas credenciales. Por favor, contacta al soporte.', 'danger')
+            else:
+                session['username'] = username
+                flash('¡Inicio de sesión exitoso!', 'success')
+                return redirect(url_for('home'))
         else:
-            flash('Nombre de usuario o contraseña incorrectos')
-
+            flash('Credenciales inválidas. Por favor, inténtalo de nuevo.', 'danger')
+        
+        cursor.close()
+        conn.close()
     return render_template('index.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)  # Elimina el nombre de usuario de la sesión
+    flash('Has cerrado sesión exitosamente.', 'success')  # Mensaje flash para notificar al usuario
+    return redirect(url_for('login'))  # Redirige al usuario a la página de inicio de sesión
+
+
     
 @app.route('/home')
 def home():

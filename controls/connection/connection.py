@@ -15,8 +15,8 @@ class Connection:
     def connect(self):
         try:
             self.__db = oracledb.connect(
-                user='user_developer',
-                password='123456',
+                user='user_pis',
+                password='eber2005',
                 dsn='localhost:1521/xe'
             )
         except Exception as error:
