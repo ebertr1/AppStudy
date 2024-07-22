@@ -26,4 +26,3 @@ class RolDaoControl(DaoAdapter):
     def save(self):
         self.__rol._id = self._lista._length + 1
         self._save(self.__rol)
-

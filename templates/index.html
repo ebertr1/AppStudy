@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Iniciar Sesión</title>
+
+
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
+
+	
+	
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIAR SESIÓN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Agrega Font Awesome -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <from class="form-signin" action="/login" method="POST">
+    <header class="header">
+        <img src="{{ url_for('static', filename='img/logounl.png') }}" alt="Logo de la Universidad" class="logo-left">
+        <h1>Bienvenido al Sistema de Seguimiento Estudiantil - SSDE</h1>
+        <img src="{{ url_for('static', filename='img/cis.png') }}" alt="Logo de la carrera" style="width: 200px; height: auto;" class="logo-right">
+    </header>
+    <div class="container">
+        <h2>INICIA SESIÓN</h2>
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+        
+            <a href="{{ url_for('home') }}" class="btn btn-outline-primary">INICIAR SESIÓN</a>
+        </form>
+       
+        <p>¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a>.</p>
+    </div>
+</body>
+</html>
+				
+	
+	<!--=============================================
+	=            Include JavaScript files           =
+	==============================================-->
+	<!-- jQuery V3.4.1 -->
+	<script src="/static/js/jquery-3.4.1.min.js" ></script>
+
+	<!-- popper -->
+	<script src="/static/js/popper.min.js" ></script>
+
+	<!-- Bootstrap V4.3 -->
+	<script src="/static/js/bootstrap.min.js" ></script>
+
+	<!-- jQuery Custom Content Scroller V3.1.5 -->
+	<script src="/static/js/jquery.mCustomScrollbar.concat.min.js" ></script>
+
+	<!-- Bootstrap Material Design V4.0 -->
+	<script src="/static/js/bootstrap-material-design.min.js" ></script>
+	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
+	<script src="/static/js/main.js" ></script>
+</body>
+</html>

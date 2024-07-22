@@ -22,4 +22,3 @@ class PeriodoAcademicoControl(DaoAdapter):
     def save(self):
         self.__periodoAcademico._id = self._lista._length + 1
         self._lista.append(self.__periodoAcademico)
-        
