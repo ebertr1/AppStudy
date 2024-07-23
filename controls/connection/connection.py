@@ -25,7 +25,7 @@ class Connection:
         else:
             print('Conexión exitosa', self.__db.version)
         return self
-
+    
     def close(self):
         if self.__db:
             self.__db.close()
